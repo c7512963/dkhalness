@@ -1,12 +1,11 @@
 // /refs 白名单图片路由（宿主端）：把工作区里的参考图以 /refs/<文件名> 暴露给浏览器。idPrefix 'imgv'
-// 白名单：D:\deepskhaness 下 ref_*.png|jpg、hanli_preview.png、*.glb 等。
+// 正确写法：webServer/fs 用 inject（宿主服务），ctx 是内置的不能 inject。
 return {
-  inject: ['webServer', 'fs', 'ctx'],
+  inject: ['webServer', 'fs'],
   apply(ctx) {
     const webServer = ctx.webServer
     const fs = ctx.fs
     const ROOT = 'D:/deepskhaness'
-    const WHITELIST = /^(ref_|hanli_|preview|screenshot|pz)/i
 
     const mime = {
       '.png': 'image/png',
