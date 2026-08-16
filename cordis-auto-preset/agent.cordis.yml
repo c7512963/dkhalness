@@ -38,6 +38,7 @@
       - `upload-inbox.host.js` → idPrefix `upld`（list_uploads 工具，宿主）
       - `upload-ui.client.js` + `upload-ui.host.js` → idPrefix `upui`（文件管理面板，双端：code.client 取 .client.js、code.host 取 .host.js）
       - `pet.host.js` + `pet.client.js` → idPrefix `otter`（韩立宠物，双端）
+      - `sknx.client.js` → idPrefix `sknx`（皮肤库，客户端；6 套配色，localStorage key `dsh-skin`，默认青花瓷）
 
       恢复方法：对每个缺失插件 `cordis_define`（kind new，idPrefix 如上，name 取存档文件头注释，code 用存档文件内容去掉顶部 `//` 注释行）→ `cordis_run`（run 模式）。客户端插件会出现批准卡，**提醒用户点允许**，不要重复重试。全部恢复成功后提醒用户刷新页面。docx 预览/编辑依赖 `D:\deepskhaness\plugins\scripts\docx_read.ps1` 与 `docx_write.ps1`，确认存在即可（随目录一起保留）。
 
