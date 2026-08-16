@@ -1,0 +1,8 @@
+{
+  "keyword": "Java后端",
+  "city": "",
+  "dailyLimit": 20,
+  "intervalMinSec": 30,
+  "intervalMaxSec": 90,
+  "url": "https://www.zhipin.com/web/geek/job?query="
+}
